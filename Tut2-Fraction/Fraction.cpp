@@ -14,6 +14,14 @@ void Fraction::add(Fraction x, Fraction y)
 	denom = (x.denom*y.deno);
 }
 
+void Fraction::fraction()
+{
+	cout << "Please enter a numerator: ";
+	cin >> num;
+	cout << "Please enter a denomonator: ";
+	cin >> denom;
+}
+
 int main()
 {
 	Fraction addObject;
