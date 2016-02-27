@@ -1,9 +1,13 @@
+//Name: Ruvania Naicker
+//Student Number: 214521716
+//Computer Methods 3: Tutorial 2 - Fractions
+
 #include<iostream>
 using namespace std;
 
-class Fraction
+class Fraction //Class created 
 {
-public:
+public: //Functions declared 
 	int num, denom;
 	void add(Fraction, Fraction);
 	void subtract(Fraction, Fraction);
@@ -13,7 +17,7 @@ public:
 	void print(Fraction x);
 };
 
-void Fraction::fraction()
+void Fraction::fraction()  //Input values 
 {
 	cout << "Please enter a numerator:";
 	cin >> num;
@@ -23,31 +27,31 @@ void Fraction::fraction()
 	cout << "\n" << endl;
 }
 
-void Fraction::add(Fraction x, Fraction y)
+void Fraction::add(Fraction x, Fraction y) //Add fractions
 {
 	num = ((x.num*y.denom) + (x.denom*y.num));
 	denom = (x.denom*y.denom);
 }
 
-void Fraction::subtract(Fraction x, Fraction y)
+void Fraction::subtract(Fraction x, Fraction y) //Subtract fractions
 {
 	num = ((x.num*y.denom) - (x.denom*y.num));
 	denom = (x.denom*y.denom);
 }
 
-void Fraction::multiply(Fraction x, Fraction y)
+void Fraction::multiply(Fraction x, Fraction y) //Multiply fractions
 {
 	num = (x.num*y.num);
 	denom = (x.denom*y.denom);
 }
 
-void Fraction::divide(Fraction x, Fraction y)
+void Fraction::divide(Fraction x, Fraction y) //Divide fractions
 {
 	num = (x.num*y.denom);
 	denom = (y.num*x.denom);
 }
 
-void print(Fraction x)
+void print(Fraction x) //Prints output in mixed number form
 {
 	int N, D;
 	int W, z;
@@ -69,7 +73,7 @@ void print(Fraction x)
 
 int main()
 {
-	Fraction fractionObject1;
+	Fraction fractionObject1; //Objects created
 	Fraction fractionObject2;
 	Fraction addObject;
 	Fraction printObject;
@@ -77,6 +81,7 @@ int main()
 	Fraction multiplyObject;
 	Fraction divideObject;
 
+	//Calling functions
 	cout << "Fraction 1:\n"<< endl;
 	fractionObject1.fraction();
 	cout << "Fraction 2:\n" << endl;
