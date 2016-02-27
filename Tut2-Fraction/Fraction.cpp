@@ -1,4 +1,4 @@
-#include<iostram>
+#include<iostream>
 using namespace std;
 
 class Fraction
@@ -6,13 +6,9 @@ class Fraction
 public:
 	int num, denom;
 	void add(Fraction, Fraction);
+	void fraction();
+	void print(Fraction x);
 };
-
-void Fraction::add(Fraction x, Fraction y)
-{
-	num = ((x.num*y.denom) + (x.denom*y.num));
-	denom = (x.denom*y.deno);
-}
 
 void Fraction::fraction()
 {
@@ -20,6 +16,18 @@ void Fraction::fraction()
 	cin >> num;
 	cout << "Please enter a denomonator: ";
 	cin >> denom;
+}
+
+void Fraction::add(Fraction x, Fraction y)
+{
+	num = ((x.num*y.denom) + (x.denom*y.num));
+	denom = (x.denom*y.denom);
+}
+
+void Fraction::subtract(Fraction x, Fraction y)
+{
+	num = ((x.num*y.denom) - (x.denom*y.num));
+	denom = (x.denom*y.denom);
 }
 
 void print(Fraction x)
@@ -53,6 +61,11 @@ int main()
 	fractionObject1.fraction();
 	cout << "Fraction 2:" << endl;
 	fractionObject2.fraction();
+
+	addObject.add(fractionObject1, fractionObject2);
+
+	cout << "Addition:" << endl;
+	print(addObject);
 
     return 0;
 }
