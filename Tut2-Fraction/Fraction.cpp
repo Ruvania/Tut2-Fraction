@@ -19,10 +19,10 @@ public: //Functions declared
 
 void Fraction::fraction()  //Input values 
 {
-	cout << "Please enter a numerator:";
+	cout << "Please enter a numerator: ";
 	cin >> num;
 	cout << "\n" << endl;
-	cout << "Please enter a denomonator:";
+	cout << "Please enter a denomonator: ";
 	cin >> denom;
 	cout << "\n" << endl;
 }
@@ -96,11 +96,11 @@ int main()
 
 	cout << "Addition:" << endl;
 	print(addObject);
-	cout << "Subtract:" << endl;
+	cout << "Subtraction:" << endl;
 	print(subtractObject);
-	cout << "Multiply:" << endl;
+	cout << "Multiplication:" << endl;
 	print(multiplyObject);
-	cout << "Divide:" << endl;
+	cout << "Division:" << endl;
 	print(divideObject);
 
     return 0;
