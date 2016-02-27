@@ -6,6 +6,8 @@ class Fraction
 public:
 	int num, denom;
 	void add(Fraction, Fraction);
+	void subtract(Fraction, Fraction);
+	void multiply(Fraction, Fraction);
 	void fraction();
 	void print(Fraction x);
 };
@@ -27,6 +29,12 @@ void Fraction::add(Fraction x, Fraction y)
 void Fraction::subtract(Fraction x, Fraction y)
 {
 	num = ((x.num*y.denom) - (x.denom*y.num));
+	denom = (x.denom*y.denom);
+}
+
+void Fraction::multiply(Fraction x, Fraction y)
+{
+	num = (x.num*y.num);
 	denom = (x.denom*y.denom);
 }
 
@@ -56,6 +64,8 @@ int main()
 	Fraction fractionObject2;
 	Fraction addObject;
 	Fraction printObject;
+	Fraction subtractObject;
+	Fraction multiplyObject;
 
 	cout << "Fraction 1:" << endl;
 	fractionObject1.fraction();
@@ -63,9 +73,15 @@ int main()
 	fractionObject2.fraction();
 
 	addObject.add(fractionObject1, fractionObject2);
+	subtractObject.subtract(fractionObject1, fractionObject2);
+	multiplyObject.multiply(fractionObject1, fractionObject2);
 
 	cout << "Addition:" << endl;
 	print(addObject);
+	cout << "Subtract:" << endl;
+	print(subtractObject);
+	cout << "Multiply:" << endl;
+	print(multiplyObject);
 
     return 0;
 }
