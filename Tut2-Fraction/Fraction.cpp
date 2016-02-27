@@ -11,5 +11,16 @@ public:
 void Fraction::add(Fraction x, Fraction y)
 {
 	num = ((x.num*y.denom) + (x.denom*y.num));
-	denom = (x.denom*y.denom);
+	denom = (x.denom*y.deno);
 }
+
+int main()
+{
+	Fraction addObject;
+
+	return 0;
+}
+
+
+	
+
